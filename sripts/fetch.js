@@ -127,5 +127,6 @@ const displayUser = ({ avatar, id, email, first_name, last_name }) => {
 // Display function to print all users info 
 function displayUsers(data) {
     const container = document.getElementById("contUser")
+    container.innerHTML= ""; //limpiamos el DOM
     data.forEach(user => container.innerHTML += displayUser(user));
 }
