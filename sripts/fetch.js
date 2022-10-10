@@ -48,7 +48,11 @@ function fetchRequest() {
         .catch(error => {
             console.log(error);
         })
-    setTimeout(() => btn(), 2400);
+        .finally( ()=>{
+            btn(); // Aparece el botón
+        });
+        
+    //setTimeout(() => btn(), 2400);
 }
 
 // Saving data function to save data to local storage 
