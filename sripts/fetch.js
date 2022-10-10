@@ -45,6 +45,9 @@ function fetchRequest() {
             usersToLocalStorage(users.data);
             displayUsers(users.data);
         })
+        .catch(error => {
+            console.log(error);
+        })
     setTimeout(() => btn(), 2400);
 }
 

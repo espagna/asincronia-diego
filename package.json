@@ -1,6 +1,6 @@
 {
   "name": "asincronia",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "practica de fetch y asincronia generation ch18",
   "main": "index.js",
   "scripts": {
@@ -17,6 +17,12 @@
   },
   "homepage": "https://github.com/dcbcueva/asincronia#readme",
   "dependencies": {
+    "axios": "^1.1.2",
     "bootstrap": "^5.2.2"
-  }
+  },
+  "keywords": [
+    "axios",
+    "fetch",
+    "json"
+  ]
 }
