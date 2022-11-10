@@ -1,7 +1,9 @@
 //const { default: axios } = require("axios");
 
 // API to obtain data 
-const api = 'https://reqres.in/api/users?delay=2'
+//const api = 'https://reqres.in/api/users?delay=2'
+//const api = '../assets/json/colors.json'
+const api = 'http://localhost:8080/demo/all';
 
 function btn() {
     const container = document.getElementById("contBtn")
@@ -48,8 +50,8 @@ function fetchRequest() {
     fetch(api)
         .then(response => response.json())
         .then(users => {
-            usersToLocalStorage(users.data);
-            displayUsers(users.data);
+            usersToLocalStorage(users.data.data);
+            displayUsers(users.data.data);
         })
         .catch(error => {
             console.log(error);
@@ -70,8 +72,8 @@ function axiosRequest(){
         .then(function (response) {
             console.log(response);
             console.log("status code: " +response.status)
-            usersToLocalStorage(response.data.data);
-            displayUsers(response.data.data);
+            usersToLocalStorage(response.data);
+            displayUsers(response.data);
         })
         .catch(error => {
             console.log(error);
